@@ -41,5 +41,19 @@ su - ansible -c "echo 'ansible' | sshpass ssh-copy-id -f -i /home/ansible/.ssh/i
 su - ansible -c "pip3 install ansible --user"
 su - ansible -c "ansible --version"
 
+su - ansible -c "mkdir -p ~/lab"
+
+cat <<EOF > ~/lab/inventory
+[control]
+control.example.com
+
+[centos]
+ansible1.example.com
+ansible2.example.com
+ansible3.example.com
+
+[ubuntu]
+ansible4.example.com
+EOF
 
 su - ansible -c "git clone https://github.com/sandervanvugt/rhce8-live.git"
