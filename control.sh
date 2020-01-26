@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Control Node Preparation ..."
 yum install -y epel-release
-yum install -y git vim byobu python3-pip
+yum install -y git vim byobu python3-pip sshpass
 
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 systemctl restart sshd
@@ -41,9 +41,9 @@ su - ansible -c "echo 'ansible' | sshpass ssh-copy-id -f -i /home/ansible/.ssh/i
 su - ansible -c "pip3 install ansible --user"
 su - ansible -c "ansible --version"
 
-su - ansible -c "mkdir -p ~/lab"
+su - ansible -c "mkdir -p /home/ansible/lab"
 
-cat <<EOF > ~/lab/inventory
+cat <<EOF > /home/ansible/lab/inventory
 [control]
 control.example.com
 
