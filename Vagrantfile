@@ -3,11 +3,11 @@
 VAGRANTFILE_API_VERSION = "2"
 
 lab = {
-	"lab-ansible1" => { :box => "centos/8" , :dns => "ansible1.example.com" , :ip => "192.168.4.201", :cpus => 1, :mem => 1024, :script => "centos-managed.sh" },
-	"lab-ansible2" => { :box => "centos/8" , :dns => "ansible2.example.com" , :ip => "192.168.4.202", :cpus => 1, :mem => 1024, :script => "centos-managed.sh" },
-	"lab-ansible3" => { :box => "centos/8" , :dns => "ansible3.example.com" , :ip => "192.168.4.203", :cpus => 1, :mem => 1024, :script => "centos-managed.sh" },
-	"lab-ansible4" => { :box => "ubuntu/bionic64" , :dns => "ansible4.example.com" , :ip => "192.168.4.204", :cpus => 1, :mem => 1024, :script => "ubu-managed.sh" },
-	"lab-control" => { :box => "centos/8" , :dns => "control.example.com" , :ip => "192.168.4.200", :cpus => 1, :mem => 1024, :script => "control.sh" },
+	"ansible1.example.com" => { :box => "centos/8" , :dns => "ansible1.example.com" , :ip => "192.168.4.201", :cpus => 1, :mem => 1024, :script => "centos-managed.sh" },
+	"ansible2.example.com" => { :box => "centos/8" , :dns => "ansible2.example.com" , :ip => "192.168.4.202", :cpus => 1, :mem => 1024, :script => "centos-managed.sh" },
+	"ansible3.example.com" => { :box => "centos/8" , :dns => "ansible3.example.com" , :ip => "192.168.4.203", :cpus => 1, :mem => 1024, :script => "centos-managed.sh" },
+	"ansible4.example.com" => { :box => "ubuntu/bionic64" , :dns => "ansible4.example.com" , :ip => "192.168.4.204", :cpus => 1, :mem => 1024, :script => "ubu-managed.sh" },
+	"control.example.com" => { :box => "centos/8" , :dns => "control.example.com" , :ip => "192.168.4.200", :cpus => 1, :mem => 1024, :script => "control.sh" },
 }
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
