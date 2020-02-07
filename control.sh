@@ -48,6 +48,8 @@ su - ansible -c "ansible --version"
 
 su - ansible -c "mkdir -p /home/ansible/lab"
 
+su - ansible -c "echo autocmd FileType yaml setlocal ai ts=2 sw=2 et > /home/ansible/.vimrc"
+
 cat <<EOF > /home/ansible/lab/inventory
 [control]
 control.example.com
