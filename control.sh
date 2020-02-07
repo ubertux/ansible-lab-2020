@@ -1,7 +1,8 @@
 #!/bin/sh
 echo "Control Node Preparation ..."
 yum install -y epel-release
-yum install -y git vim byobu python3-pip sshpass
+yum install -y git vim byobu python3-pip sshpass gpm
+systemctl --now enable gpm
 
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 systemctl restart sshd
