@@ -17,5 +17,5 @@ cat <<EOF >> /etc/hosts
 192.168.4.201 ansible1.example.com ansible1
 192.168.4.202 ansible2.example.com ansible2
 192.168.4.203 ansible3.example.com ansible3
-192.168.4.204 ansible3.example.com ansible4
+192.168.4.204 ansible4.example.com ansible4
 EOF
